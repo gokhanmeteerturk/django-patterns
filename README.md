@@ -4,7 +4,7 @@ Commonly occurring design patterns in Django (In a 'this works for me' sense, ra
 ## Sections
 
 - About Django Patterns
-    - Prerequisites
+    - [Prerequisites](documentation/Prerequisites/README.md)
     - How to use the docs
     - How to contribute
 
