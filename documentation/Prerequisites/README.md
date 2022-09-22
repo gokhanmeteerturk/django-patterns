@@ -1,3 +1,5 @@
+<sub>:arrow_left: [go back to **django-patterns**](../../README.md)</sub>
+
 ## Prerequisites
 
 Django Patterns documentation assumes you know the Django basics as covered in the [Django Documentation](https://docs.djangoproject.com/en/4.1/intro/tutorial01/)
