@@ -1,3 +1,5 @@
+<sub>:arrow_left: [go back to **django-patterns**](README.md)</sub>
+
 ## CONTRIBUTING
 
 - Create a new issue or find an existing one you would want to write about.
