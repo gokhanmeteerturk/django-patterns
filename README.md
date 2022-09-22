@@ -6,7 +6,7 @@ Commonly occurring design patterns in Django (In a 'this works for me' sense, ra
 - About Django Patterns
     - [Prerequisites](documentation/Prerequisites/README.md)
     - How to use the docs
-    - How to contribute
+    - [How to contribute](CONTRIBUTING.md)
 
 - Settings
     - Using local_settings.py and settings.py
