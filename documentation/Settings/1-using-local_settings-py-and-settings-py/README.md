@@ -1,6 +1,6 @@
-<sub>:arrow_left: [go back to **django-patterns**](../../README.md)</sub>
+<sub>:arrow_left: [go back to **django-patterns**](../../../README.md)</sub>
 
-## Main Heading
+## Using local_settings.py and settings.py
 
 There is an industry standard for handling local settings for different environments running the same Django project. People usually create a local settings file and import it at the end of the settings.py file to override settings with local ones. Developers keep this file (often named as `local_settings.py`) out of the VSC, (for example, by adding its name to .gitignore file). And every development and production machine has its own local copy.
 
