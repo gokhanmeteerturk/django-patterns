@@ -2,7 +2,9 @@
 
 ## Using local_settings.py and settings.py
 
-There is an industry standard for handling local settings for different environments running the same Django project. People usually create a local settings file and import it at the end of the settings.py file to override settings with local ones. Developers keep this file (often named as `local_settings.py`) out of the VSC, (for example, by adding its name to .gitignore file). And every development and production machine has its own local copy.
+There is an industry standard for handling local settings for different environments running the same Django project. People usually create a local settings file and import it at the end of the settings.py file to override settings with local ones.
+
+Developers keep this file (often named as `local_settings.py`) out of the VSC, (for example, by adding its name to .gitignore file). And every development and production machine has its own local copy.
 
 First, a local_settings file is created:
 ```python
@@ -34,6 +36,7 @@ Another approach is to make local_settings import settings.py at the beginning, 
 ## A better approach
 
 Another approach that is becoming increasingly popular is having a settings directory(or module) and setting the environment variable `DJANGO_SETTINGS_MODULE`.
+
 Since Django Secret and other credentials are (hopefully) already stored as environment variables (in virtual environments), adding one more environment variable to the list shouldn't hurt.
 
 For this to work, you should first have this structure for your project:
