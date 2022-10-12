@@ -9,7 +9,7 @@ Commonly occurring design patterns in Django (In a 'this works for me' sense, ra
     - [How to contribute](CONTRIBUTING.md)
 
 - Settings
-    - Using local_settings.py and settings.py
+    - [Using local_settings.py and settings.py](documentation/Settings/1-using-local_settings-py-and-settings-py/README.md)
     - Using default values for project and app settings
     - Handling SECRET_KEY correctly
     - Relative paths in the configuration
