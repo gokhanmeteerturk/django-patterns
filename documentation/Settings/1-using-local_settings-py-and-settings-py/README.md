@@ -29,6 +29,32 @@ except ImportError:
 ```
 Usually, a local_settings_template.py file is pushed to the version control system (a dedacted clone of local_settings.py) to give the devs an idea of what local settings they should configure.
 
+Here is a simplified version of a local_settings_template.py file I use in one of my projects:
+
+```python
+
+ALLOWED_HOSTS = ['*']
+DEBUG = True
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': '...',
+        'USER': '...',
+        'PASSWORD': '...',
+        'HOST': '',
+        'PORT': ''
+    }
+}
+SECRET_KEY = '...............'
+SECRET_KEY_FALLBACKS = []
+DEVELOPMENT = True
+
+AWS_ACCESS_KEY_ID = '...............'
+AWS_SECRET_ACCESS_KEY = '..............'
+AWS_STORAGE_BUCKET_NAME = '............'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+```
+
 For complex projects, however, this approach will have several disadvantages. Settings files will need to have some logic as well, and local settings file can't reference to the main settings file.
 
 Another approach is to make local_settings import settings.py at the beginning, but this solution still has very similar disadvantages, therefore will not be explored here.
