@@ -21,7 +21,7 @@ Commonly occurring design patterns in Django (In a 'this works for me' sense, ra
     - Hashids and crc32 for urls
 
 - Models
-    - Avoiding fat representations with caused by models
+    - Avoiding fat views caused by thin models
 
 - Queries
     - Using Prefetch Objects
