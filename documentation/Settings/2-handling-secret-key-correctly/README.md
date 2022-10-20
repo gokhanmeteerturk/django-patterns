@@ -69,8 +69,11 @@ A cool detail about Github's approach is that it uses Libsodium to ensure safety
 
 If your SECRET_KEY is not compromised, but you still want to change it just in case, you can use SECRET_KEY_FALLBACKS constant to store your old secret key to maintain backwards compability with cookies, password reset hashes etc. This setting is added in Django 4.1 (which will create some overhead for each fallback key. So use it only if you really need to.)
 
+## DON'T: Leaving SECRET_KEY In Repo For Easier Local Development
 
+I've seen this on many repos. To make configuration of the local/development deployments less of a hassle, many projects leave the initial SECRET_KEY created by Django in settings.py. They just override this setting on any production instance, either by importing a local settings file which shadows the original variable with environmental variable or doing the same in settings.py by checking 'if' there is an environment variable and using the original if there isn't one.
 
+This will put all your development machines at risk. Especially in more complex applications, completely making cryptography pointless for all development machines will create severe security risks. Don't use the same secret key in more then one machine and don't distribute secret keys over any network even if it will be used for development stage only.
 
 ---
 
