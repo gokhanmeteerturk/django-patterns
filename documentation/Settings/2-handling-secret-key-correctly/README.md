@@ -26,7 +26,7 @@ But how/where to store this SECRET_KEY so that it is not compromised at all?
 
 ## Where To Keep My Secret Key?
 
-Definitely not in your public repos. If your Django project will be available publicly, it is a good practice to not include it at all. Django will not start without a secret key, so the absence of it won't be a security issue. 
+Definitely not in your public repos. If your Django project will be available publicly, it is a good practice to not include it at all. Django will not start without a secret key, so the absence of it won't be a security issue. (It will throw ImproperlyConfigured exception)
 
 Just as all other secrets, industry standard for storing a SECRET_KEY for a Django project is keeping it in local&virtual environment. dotenv is a popular solution to make this easier. And your settings file can simply import the secret key from environment.
 
@@ -43,10 +43,27 @@ from decouple import config
 SECRET_KEY = config("SECRET_KEY")
 
 ```
-### Heroku:
+
+## Storing SECRET_KEY on different platforms:
+
+#### Kubernetes
+You can create `Secrets` from config files(eg: yaml files) using kubectl 
+#### Heroku:
+You can set heroku config with:
 ```
 heroku config:set SECRET_KEY=.... # Without quotes.
 ```
+Note: django-configurations looks for DJANGO_SECRET_KEY by default, and not SECRET_KEY.
+
+#### Docker Swarm
+There is Docker Secrets for Swarm. There are [several options](https://docs.docker.com/engine/swarm/secrets/#how-docker-manages-secrets) you can go with.
+#### Github
+Github Actions has encrypted secrets support. There are several ways of using this feature, but you should either use github cli or the web client.
+See [creating encrypted secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#creating-encrypted-secrets-for-a-repository) section of the Github Docs for more information.
+```bash
+gh secret set SECRET_KEY
+```
+A cool detail about Github's approach is that it uses Libsodium to ensure safety of the data transfer.
 
 ## Django's Secret Key Fallback Setting
 
@@ -59,5 +76,6 @@ If your SECRET_KEY is not compromised, but you still want to change it just in c
 
 #### References and Helpful Resources
 1. Popular .env solution [python-dotenv](https://pypi.org/project/python-dotenv/)
-2. 
+2. [Source](https://serverfault.com/questions/547301/why-cant-django-configurations-pick-up-a-secret-key-environment-variable-from-a) for the note on heroku deployment with django-configurations
+3. Django documentation on [SECRET_KEY_FALLBACK](https://docs.djangoproject.com/en/4.1/ref/settings/#secret-key-fallbacks)
 
