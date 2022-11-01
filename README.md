@@ -29,3 +29,6 @@ Commonly occurring design patterns in Django (In a 'this works for me' sense, ra
 - Templates
     - Utilizing template blocks (aka 'chunks')
     - Accessing SETTINGS from within templates
+
+- Others
+    - Leveraging Monolith Structure
