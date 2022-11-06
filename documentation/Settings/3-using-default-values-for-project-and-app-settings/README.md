@@ -1,4 +1,4 @@
-<sub>:arrow_left: [go back to **django-patterns**](../../README.md)</sub>
+<sub>:arrow_left: [go back to **django-patterns**](../../../README.md)</sub>
 
 ## Using default values for project and app settings
 
