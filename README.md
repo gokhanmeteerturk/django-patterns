@@ -10,7 +10,7 @@ Commonly occurring design patterns in Django (In a 'this works for me' sense, ra
 
 - Settings
     - [Using local_settings.py and settings.py](documentation/Settings/1-using-local_settings-py-and-settings-py/README.md)
-    - Using default values for project and app settings
+    - [Using default values for project and app settings](documentation/Settings/3-using-default-values-for-project-and-app-settings/README.md)
     - [Handling SECRET_KEY correctly](documentation/Settings/2-handling-secret-key-correctly/README.md)
     - Relative paths in the configuration
     - Choosing a media server
