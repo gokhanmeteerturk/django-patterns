@@ -2,12 +2,11 @@
 
 ## Using default values for project and app settings
 
-No matter how confident you are with the availability of constants and environment variables in your project, you shouldn't take that availability for granted.
+No matter how confident you are with the availability of constants and environment variables in your project, it would help if you didn't take that availability for granted.
 
-Django settings tend to get more complicated and complex as the project grows. A constant hardcoded to settings.py today may turn into a dynamic setting or get imported from the local environment tomorrow. It may also need more than one default values depending on your setup.
+Django settings tend to get more complicated and complex as the project grows. A constant hardcoded to settings.py today may turn into a dynamic setting or get imported from the local environment tomorrow. Depending on your setup, it may also need more than one default value.
 
-When that happens, you won't want to find all usages of the setting variable and check if your code makes correct assumptions for the defaults. 
-
+When that happens, you won't want to find all usages of the setting variable and check if your code makes correct assumptions for the defaults.
 
 > **❌ Bad Practice**
 > ```python
@@ -31,8 +30,8 @@ Bad practice:
 ### Creating a helper module
 
 I have seen this several times, but not as often as I would like to.
-One may argue if this is necessary at all since getattr does what you need with very little effort.
-But creating a settings module is a cool approach towards having a more OOP oriented solution for settings management.
+One may argue that this is necessary since getattr does what you need with little effort.
+But creating a settings module is a cool approach towards having a more OOP-oriented solution for settings management.
 
 ```python
 # file name: app_conf.py
