@@ -68,6 +68,6 @@ print(polls_settings.MY_CONSTANT)
 ---
 
 #### References and Helpful Resources
-1. Check out other examples on [this SO page]([https://github.com/gokhanmeteerturk/django-patterns](https://stackoverflow.com/questions/5601590/how-to-define-a-default-value-for-a-custom-django-setting))
+1. Check out other examples on [this SO page](https://stackoverflow.com/questions/5601590/how-to-define-a-default-value-for-a-custom-django-setting)
 2. For complex projects, take a look at [Django Dynamic Preferences](https://github.com/agateblue/django-dynamic-preferences)
 3. [Constance](https://github.com/jazzband/django-constance) is also a nice solution for migrating static settings to dynamic ones.
